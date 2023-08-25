@@ -29,7 +29,7 @@ const ProductList = async () => {
 			<h1>Welcome to home page</h1>
 			<ul>
 				{products.map((data) => (
-					<div className='flex my-5'>
+					<div className='flex my-5' key={data.id}>
 
 						<li>{data.title}</li>
 						<div><Price price={data.price}></Price></div>

@@ -1,7 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	images: {
-		domains: ["pixabay.com"]
+	redirects: async () => {
+		return [
+			{
+				source: "/products",
+				destination: "/",
+				permanent: false
+			}
+		]
 	}
 }
 
