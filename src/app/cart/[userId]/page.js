@@ -2,13 +2,13 @@
 import apiProduct from "../../../../service/getCart"
 
 
-const page = async (props) => {
+const page = async ({ params }) => {
 
 	const getuserList = apiProduct()
 	const users = await getuserList
-	const currentid = props.params.userId
+	const currentid = params.userId
 	const userdata = users[currentid - 1]
-	console.log();
+	console.log(params.userId);
 	return (
 		<div>
 			user details by id

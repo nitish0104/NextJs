@@ -1,9 +1,10 @@
+import data from "../../../utiles/data"
+
 const { NextResponse } = require("next/server")
 
-export function GET(req) {
-	return NextResponse.json({ name: "Nitish", Age: "21" })
+export function GET(req, res) {
+
+	return NextResponse.json(data)
 }
 
-// export default function GET(req, res) {
-// 	res.status(200).json({ name: 'John Doe' })
-// }
+
